@@ -1,0 +1,166 @@
+/* Aplica un reinicio básico a todos los elementos, eliminando márgenes, rellenos y configurando box-sizing a border-box. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Calibri', sans-serif; /* Establece la fuente del texto en 'Calibri' o una fuente sans-serif. */
+    color: #eaeaea; /* Define el color del texto en un tono claro. */
+    background-image: url('fondo.jpg'); /* Establece una imagen de fondo. */
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla. */
+    background-position: center center; /* Centra la imagen de fondo en ambas direcciones. */
+    background-attachment: fixed; /* Fija la imagen de fondo al hacer scroll. */
+}
+
+header {
+    background: url('anime-background.jpg') no-repeat center center; /* Añade una imagen de fondo sin repetición, centrada. */
+    background-size: cover; /* Hace que la imagen de fondo cubra todo el header. */
+    color: white; /* Define el color del texto en blanco. */
+    padding: 50px 0; /* Añade espacio vertical alrededor del contenido. */
+    text-align: center; /* Centra el contenido del header horizontalmente. */
+    background-color: rgba(0, 0, 0, 0.7); /* Añade un fondo semi-transparente negro para mejorar la legibilidad. */
+}
+
+header h1 {
+    font-size: 3.5rem; /* Define el tamaño de la fuente del título principal. */
+    color: #a0e9ff; /* Establece el color del título principal. */
+    margin-bottom: 10px; /* Añade un margen inferior al título principal. */
+}
+
+header h2 {
+    font-size: 1.6rem; /* Define el tamaño de la fuente del subtítulo. */
+    color: #c4f1ff; /* Establece el color del subtítulo. */
+}
+
+nav ul {
+    display: flex; /* Utiliza flexbox para alinear los elementos del menú de navegación. */
+    justify-content: center; /* Centra los elementos del menú. */
+    list-style-type: none; /* Elimina los puntos de la lista. */
+    margin-top: 20px; /* Añade un margen superior a la lista de navegación. */
+}
+
+nav ul li {
+    margin: 0 15px; /* Añade espacio entre cada enlace de navegación. */
+}
+
+nav ul li a {
+    color: #ffffff; /* Define el color del texto de los enlaces. */
+    text-decoration: none; /* Elimina el subrayado de los enlaces. */
+    font-size: 1.3rem; /* Define el tamaño de la fuente de los enlaces. */
+    padding: 8px 15px; /* Añade relleno a los enlaces para un área de clic más grande. */
+    border-radius: 5px; /* Redondea las esquinas de los enlaces. */
+    background-color: rgba(255, 255, 255, 0.1); /* Añade un fondo semi-transparente a los enlaces. */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Añade una transición para el cambio de color y el desplazamiento. */
+}
+
+nav ul li a:hover {
+    background-color: #a0e9ff; /* Cambia el color de fondo al hacer hover. */
+    color: #141E30; /* Cambia el color del texto al hacer hover. */
+    transform: translateY(-3px); /* Desplaza el enlace ligeramente hacia arriba al hacer hover. */
+}
+
+main {
+    padding: 20px; /* Añade espacio interno alrededor del contenido principal. */
+    max-width: 1200px; /* Define el ancho máximo del contenido. */
+    margin: auto; /* Centra el contenido principal en la página. */
+}
+
+section {
+    margin-bottom: 30px; /* Añade espacio inferior a cada sección. */
+}
+
+.sinopsis, .detalles, .imagen, .video-trailer {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para cada sección. */
+    padding: 25px; /* Añade espacio interno alrededor del contenido de cada sección. */
+    border-radius: 15px; /* Redondea las esquinas de las secciones. */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Aplica una sombra para dar profundidad. */
+    margin-bottom: 30px; /* Añade espacio inferior entre secciones. */
+}
+
+.sinopsis h2, .detalles h2, .imagen h2, .video-trailer h2 {
+    color: #a0e9ff; /* Define el color del encabezado de cada sección. */
+    border-bottom: 2px solid #00b4d8; /* Añade una línea decorativa debajo del encabezado. */
+    padding-bottom: 10px; /* Añade espacio inferior al texto del encabezado. */
+    margin-bottom: 20px; /* Añade margen inferior al encabezado. */
+}
+
+.detalles ul {
+    list-style-type: none; /* Elimina los puntos de la lista de detalles. */
+    font-size: 1.1rem; /* Define el tamaño de la fuente de la lista de detalles. */
+}
+
+.detalles ul li {
+    padding: 10px; /* Añade espacio interno a cada elemento de la lista. */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente para cada elemento. */
+    border-radius: 5px; /* Redondea las esquinas de cada elemento. */
+    margin-bottom: 10px; /* Añade espacio entre elementos de la lista. */
+}
+
+.imagen img {
+    width: 100%; /* La imagen ocupa el 100% del ancho disponible. */
+    height: auto; /* Mantiene la proporción de la imagen. */
+    border-radius: 10px; /* Redondea las esquinas de la imagen. */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Añade sombra para profundidad. */
+}
+
+iframe {
+    border-radius: 10px; /* Redondea las esquinas del iframe. */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Añade sombra para dar profundidad al iframe. */
+}
+
+footer {
+    background-color: #1c2b39; /* Establece el color de fondo del pie de página. */
+    color: white; /* Define el color del texto del pie de página en blanco. */
+    text-align: center; /* Centra el texto dentro del pie de página. */
+    padding: 20px; /* Añade espacio interno al pie de página. */
+}
+
+.social-media a {
+    margin: 0 10px; /* Añade espacio lateral entre los enlaces de redes sociales. */
+}
+
+.social-media img {
+    width: 30px; /* Define el ancho de las imágenes de redes sociales. */
+    height: auto; /* Mantiene la proporción de las imágenes. */
+    transition: transform 0.3s; /* Añade una transición suave para la transformación de escala. */
+}
+
+.social-media img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al hacer hover. */
+}
+
+/* Responsive Design */
+/* Ajustes de diseño para pantallas pequeñas */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem; /* Reduce el tamaño de la fuente del título en dispositivos medianos. */
+    }
+
+    header h2 {
+        font-size: 1rem; /* Reduce el tamaño de la fuente del subtítulo. */
+    }
+
+    .sinopsis, .detalles, .imagen, .video-trailer {
+        padding: 15px; /* Reduce el espacio interno para mejorar la legibilidad en pantallas pequeñas. */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem; /* Reduce aún más el tamaño del título en pantallas muy pequeñas. */
+    }
+
+    header h2 {
+        font-size: 0.9rem; /* Ajusta el tamaño del subtítulo en pantallas pequeñas. */
+    }
+
+    nav ul {
+        flex-direction: column; /* Cambia el menú de navegación a una columna en pantallas pequeñas. */
+    }
+
+    .sinopsis, .detalles, .imagen, .video-trailer {
+        margin-bottom: 20px; /* Ajusta el margen entre secciones en dispositivos móviles. */
+    }
+}

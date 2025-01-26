@@ -1,0 +1,112 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonts and Colors */
+body {
+    font-family: 'Calibri', sans-serif;
+    color: #eaeaea;
+    background-color: #301414;
+    background-image: linear-gradient(to bottom, #552424, #301414);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.anime-logo {
+    width: 200px;
+    /* Ajusta el tamaño según prefieras */
+    height: auto;
+}
+
+/* Botones */
+.button-container {
+    text-align: center;
+}
+
+.button-container a {
+    display: inline-block;
+    background-color: #f24e56; /* Color característico de Kaguya-sama */
+    color: white;
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    margin: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.button-container a:hover {
+    background-color: #f94f4f;
+    color: #141E30;
+    transform: translateY(-5px);
+}
+
+.button-container a:active {
+    transform: translateY(2px);
+}
+
+/* Pie de página */
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .button-container a {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+        margin: 10px;
+    }
+}
+
+/* Diseño Responsivo Mejorado */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header h2 {
+        font-size: 1rem;
+    }
+
+    .sinopsis, .detalles, .imagen, .video-trailer {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header h2 {
+        font-size: 0.9rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .sinopsis, .detalles, .imagen, .video-trailer {
+        margin-bottom: 20px;
+    }
+}

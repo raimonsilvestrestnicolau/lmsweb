@@ -1,0 +1,189 @@
+/* Basic Reset */
+/* Reinicia márgenes y rellenos de todos los elementos y define el box-sizing en border-box */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+/* Estilos Generales del Body */
+/* Fuente, colores y fondo general */
+body {
+    font-family: 'Calibri', sans-serif; /* Fuente principal */
+    color: #eaeaea; /* Color del texto */
+    background-image: url('fondo.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Imagen de fondo cubre toda la pantalla */
+    background-position: center center; /* Centra la imagen de fondo */
+    background-attachment: fixed; /* Fija la imagen de fondo al desplazarse */
+}
+
+/* Encabezado */
+header {
+    background: url('anime-background.jpg') no-repeat center center; /* Imagen de fondo del encabezado */
+    background-size: cover; /* Imagen de fondo cubre todo el encabezado */
+    color: white; /* Color del texto del encabezado */
+    padding: 50px 0; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+    background-color: rgba(0, 0, 0, 0.7); /* Color de fondo semitransparente */
+}
+
+header h1 { 
+    font-size: 2.7rem; /* Tamaño de fuente del título principal */
+    color: #a0e9ff; /* Color del título principal */
+}
+
+/* Navegación */
+nav ul { 
+    list-style: none; /* Elimina los puntos de la lista */
+    margin-top: 20px; /* Margen superior de la lista */
+    display: flex; /* Flexbox para alinear horizontalmente */
+    justify-content: center; /* Centra la lista de navegación */
+}
+
+nav ul li { 
+    display: inline; /* Alinea los elementos de la lista en fila */
+    margin: 0 15px; /* Espaciado entre los elementos */
+}
+
+nav ul li a { 
+    color: white; /* Color de los enlaces */
+    text-decoration: none; /* Elimina el subrayado */
+    font-size: 1.3rem; /* Tamaño de fuente */
+    padding: 8px 15px; /* Espacio interno */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones */
+}
+
+nav ul li a:hover { 
+    background-color: #f9c74f; /* Color de fondo al hacer hover */
+    color: #301421; /* Color del texto al hacer hover */
+    transform: translateY(-3px); /* Efecto de desplazamiento */
+}
+
+/* Contenido Principal */
+main { 
+    padding: 20px; /* Espaciado interno */
+    max-width: 1200px; /* Ancho máximo */
+    margin: auto; /* Centra el contenido */
+}
+
+section h2 { 
+    font-size: 2rem; /* Tamaño de fuente del título de las secciones */
+    color: #ffffff; /* Color del texto */
+    margin-bottom: 15px; /* Espaciado inferior */
+    padding-bottom: 10px; /* Relleno inferior */
+}
+
+/* Información del Personaje */
+.personaje-info { 
+    display: flex; /* Alineación en fila */
+    align-items: center; /* Centra los elementos verticalmente */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    padding: 20px; /* Espacio interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    margin-bottom: 30px; /* Espaciado inferior */
+}
+
+.personaje-info img { 
+    width: 200px; /* Ancho de la imagen */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-right: 20px; /* Espaciado derecho */
+    transition: transform 0.3s ease; /* Transición de transformación */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+.personaje-info img:hover { 
+    transform: scale(1.1); /* Efecto de aumento */
+}
+
+.personaje-info p { 
+    font-size: 1.1rem; /* Tamaño de fuente */
+    color: #eaeaea; /* Color del texto */
+}
+
+/* Habilidades del Personaje */
+.skills { 
+    margin-top: 15px; /* Espaciado superior */
+}
+
+.skills ul { 
+    list-style: square; /* Lista con viñetas cuadradas */
+    margin-left: 20px; /* Margen izquierdo */
+    color: #c4f1ff; /* Color del texto */
+}
+
+.skills h3 { 
+    color: #f9c74f; /* Color del encabezado */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+/* Pie de Página */
+footer { 
+    background: #243B55; /* Fondo del pie de página */
+    color: white; /* Color del texto */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+}
+
+.footer-content a { 
+    color: white; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    margin: 0 10px; /* Espaciado lateral */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transición */
+}
+
+.footer-content a:hover { 
+    color: #f9c74f; /* Color al hacer hover */
+    transform: scale(1.1); /* Efecto de aumento */
+}
+
+.crunchyroll-icon { 
+    width: 30px; /* Ancho de iconos */
+    vertical-align: middle; /* Alineación vertical */
+    transition: transform 0.3s ease; /* Transición */
+}
+
+.footer-content a:hover .crunchyroll-icon { 
+    transform: scale(1.1); /* Efecto de aumento */
+}
+
+/* Diseño Responsivo */
+@media (max-width: 768px) { 
+    header h1 { 
+        font-size: 2.5rem; /* Reducción del título en pantallas pequeñas */
+    }
+
+    .personaje-info { 
+        flex-direction: column; /* Alinea en columna en pantallas pequeñas */
+        text-align: center; /* Centra el texto */
+    }
+
+    .personaje-info img { 
+        margin-bottom: 15px; /* Espaciado inferior */
+    }
+}
+
+footer {
+    background-color: #1c2b39; /* Color del fondo del pie de página */
+    color: white; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Redes Sociales */
+.social-media a {
+    margin: 0 10px; /* Espaciado entre enlaces */
+}
+
+.social-media img {
+    width: 30px; /* Tamaño de iconos */
+    height: auto; /* Mantiene proporción */
+    transition: transform 0.3s; /* Transición de escalado */
+}
+
+.social-media img:hover {
+    transform: scale(1.1); /* Efecto de aumento */
+}

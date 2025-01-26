@@ -1,0 +1,117 @@
+/* Aplica un reinicio básico para eliminar márgenes y rellenos de todos los elementos y establecer el box-sizing en border-box */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonts and Colors */
+/* Estilos de fuente y colores de fondo para el cuerpo de la página */
+body {
+    font-family: 'Calibri', sans-serif; /* Fuente principal */
+    color: #eaeaea; /* Color de texto */
+    background-color: #141E30; /* Color de fondo de la página */
+    background-image: linear-gradient(to bottom, #243B55, #141E30); /* Gradiente de fondo */
+    height: 100vh; /* Altura completa de la ventana */
+    display: flex; /* Utiliza flexbox para centrar el contenido */
+    flex-direction: column; /* Alineación de elementos en columna */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+}
+
+/* Logo */
+/* Estilos para el contenedor del logo */
+.logo-container {
+    display: flex; /* Flexbox para centrar el logo */
+    justify-content: center; /* Centra el logo horizontalmente */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+.anime-logo {
+    width: 200px; /* Ancho del logo */
+    height: auto; /* Mantiene la proporción del logo */
+}
+
+/* Botones */
+/* Estilos para el contenedor de los botones */
+.button-container {
+    text-align: center; /* Centra los botones */
+}
+
+.button-container a {
+    display: inline-block; /* Hace que los enlaces se comporten como botones */
+    background-color: #00b4d8; /* Color de fondo del botón */
+    color: white; /* Color de texto del botón */
+    font-size: 1.5rem; /* Tamaño de fuente */
+    padding: 15px 30px; /* Espacio interno del botón */
+    margin: 20px; /* Espacio entre botones */
+    border-radius: 10px; /* Bordes redondeados */
+    text-decoration: none; /* Elimina subrayado del enlace */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones de color y transformación */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Sombra del botón */
+}
+
+.button-container a:hover {
+    background-color: #f9c74f; /* Cambia el color de fondo al hacer hover */
+    color: #141E30; /* Cambia el color del texto al hacer hover */
+    transform: translateY(-5px); /* Desplaza el botón hacia arriba al hacer hover */
+}
+
+.button-container a:active {
+    transform: translateY(2px); /* Desplaza el botón hacia abajo al hacer clic */
+}
+
+/* Pie de página */
+/* Estilos para el pie de página */
+footer {
+    position: absolute; /* Posición fija en la parte inferior */
+    bottom: 10px; /* Separación del borde inferior */
+    width: 100%; /* Ancho completo */
+    text-align: center; /* Centra el texto */
+    color: #f9c74f; /* Color del texto del pie de página */
+    font-size: 1.1rem; /* Tamaño de la fuente */
+}
+
+/* Responsive Design */
+/* Estilos responsivos para dispositivos medianos */
+@media (max-width: 768px) {
+    .button-container a {
+        font-size: 1.2rem; /* Tamaño de fuente reducido */
+        padding: 10px 20px; /* Ajuste de relleno para botones */
+        margin: 10px; /* Margen reducido */
+    }
+}
+
+/* Diseño Responsivo Mejorado */
+/* Ajustes adicionales para mejorar la visualización en pantallas pequeñas */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem; /* Reduce el tamaño de la fuente del título */
+    }
+
+    header h2 {
+        font-size: 1rem; /* Reduce el tamaño de la fuente del subtítulo */
+    }
+
+    .sinopsis, .detalles, .imagen, .video-trailer {
+        padding: 15px; /* Reduce el espacio interno en secciones */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem; /* Ajuste adicional para pantallas muy pequeñas */
+    }
+
+    header h2 {
+        font-size: 0.9rem; /* Ajusta el tamaño del subtítulo en dispositivos pequeños */
+    }
+
+    nav ul {
+        flex-direction: column; /* Coloca el menú de navegación en columna */
+    }
+
+    .sinopsis, .detalles, .imagen, .video-trailer {
+        margin-bottom: 20px; /* Ajusta el margen inferior de las secciones */
+    }
+}
